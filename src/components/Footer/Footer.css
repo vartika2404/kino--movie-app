@@ -1,79 +1,133 @@
 .footer {
-    background-color: #111;
-    color: #bdbdbd;
-    padding: 60px 40px 20px;
-    margin-top: 50px;
+  background-color: #111;
+  color: #bdbdbd;
+  padding: 50px 30px 20px;
+  margin-top: 50px;
+  border-top: 1px solid #2a2a2a;
 }
 
 
 .footer_top {
-    display: flex;
-    justify-content: center;
-    gap: 250px;
-    flex-wrap: wrap;
-
-    border-bottom: 1px solid #2a2a2a;
-
-    padding-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 80px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #2a2a2a;
+  padding-bottom: 35px;
 }
 
 
 .footer_brand {
-    max-width: 400px;
+  max-width: 380px;
 }
 
 .footer_brand h1 {
-    color: #ffe600;
-    font-size: 48px;
-    letter-spacing: 4px;
-    margin-bottom: 20px;
+  color: #ffe600;
+  font-size: 40px;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
 }
 
 .footer_brand p {
-    line-height: 1.8;
-    font-size: 16px;
+  line-height: 1.7;
+  font-size: 15px;
+  color: #c7c7c7;
 }
 
 
 .footer_links,
 .footer_info {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
 .footer_links h3,
 .footer_info h3 {
-    color: #ffe600;
-    font-size: 14px;
-    letter-spacing: 3px;
-    margin-bottom: 10px;
+  color: #ffe600;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
 }
 
 .footer_links a,
 .footer_info a {
-    text-decoration: none;
-    color: #bdbdbd;
-    font-size: 18px;
-
-    transition: 0.3s;
+  text-decoration: none;
+  color: #bdbdbd;
+  font-size: 16px;
+  transition: 0.3s ease;
 }
 
 .footer_links a:hover,
 .footer_info a:hover {
-    color:#ffe600;
+  color: #ffe600;
+  transform: translateX(3px);
 }
 
 
 .footer_bottom {
-    padding-top: 20px;
-    text-align: center;
+  padding-top: 18px;
+  text-align: center;
 }
 
 .footer_bottom p {
-    font-size: 15px;
+  font-size: 14px;
+  color: #9c9c9c;
 }
 
 .footer_bottom span {
-    color: #ffe600;
+  color: #ffe600;
+}
+
+
+
+@media (max-width: 768px) {
+
+  .footer {
+    padding: 40px 20px 20px;
+    text-align: center;
+  }
+
+  .footer_top {
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    padding-bottom: 30px;
+  }
+
+  .footer_brand {
+    max-width: 100%;
+  }
+
+  .footer_brand h1 {
+    font-size: 30px;
+  }
+
+  .footer_brand p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .footer_links,
+  .footer_info {
+    align-items: center;
+    gap: 12px;
+  }
+
+  .footer_links h3,
+  .footer_info h3 {
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+
+  .footer_links a,
+  .footer_info a {
+    font-size: 14px;
+  }
+
+  .footer_bottom p {
+    font-size: 13px;
+  }
+
 }

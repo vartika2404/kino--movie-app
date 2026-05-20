@@ -1,35 +1,68 @@
+
 .navbar {
-  height: 80px;
+  min-height: 70px; /* height: 80px se better hai min-height use karna */
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 0 20px;
+  padding: 10px 20px;
   background: #1a1a1a;
   position: sticky;
   top: 0;
   z-index: 1000;
   justify-content: space-between;
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: 1px solid #333; /* Pure white se better dark theme ke liye */
 }
 
 .navbar > h1 {
-  font-size: 30px;
+  font-size: 24px; /* Mobile par 30px bada lagega, isliye thoda chhota */
   color: #ffe400;
+  margin-right: 10px;
 }
 
 .navbar_links {
   display: flex;
-  gap: 20px;
   align-items: center;
+  gap: 10px;
 }
 
 .navbar_links > a {
   display: flex;
   align-items: center;
-  font-size: 20px;
+  font-size: 16px; /* Mobile ke liye standard size */
   font-weight: 500;
   color: #fff;
   text-decoration: none;
-  padding: 0 15px;
+  padding: 5px 10px;
+  transition: 0.3s;
 }
 
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Logo upar, links neeche */
+    height: auto;
+    padding: 15px 10px;
+    gap: 15px;
+  }
+
+  .navbar_links {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap; /* Agar links zyada hain toh automatic dusri line mein aa jayein */
+    gap: 8px;
+  }
+
+  .navbar_links > a {
+    font-size: 14px; /* Chhoti screen par readability behtar hogi */
+    padding: 8px 12px;
+    background: #2a2a2a; /* Buttons jaisa look */
+    border-radius: 20px;
+    border: 1px solid #444;
+  }
+  
+  .navbar > h1 {
+    font-size: 22px;
+    margin-right: 0;
+  }
+}
